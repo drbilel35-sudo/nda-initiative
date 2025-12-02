@@ -1,0 +1,10 @@
+# Simple render.yaml for static site
+services:
+  - type: web
+    name: nda-website
+    env: static
+    buildCommand: ""
+    staticPublishPath: ./
+    envVars:
+      - key: NODE_ENV
+        value: production
