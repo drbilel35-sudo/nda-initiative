@@ -1,0 +1,37 @@
+{
+  "name": "nda-initiative-website",
+  "version": "1.0.0",
+  "description": "Neuro-Dimensional Architecture Initiative - Research Portal",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server .",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests specified'",
+    "deploy": "echo 'Deploy to Render: git push'",
+    "optimize-images": "echo 'Image optimization would run here'",
+    "minify-css": "npx cleancss -o assets/css/style.min.css assets/css/style.css",
+    "minify-js": "npx uglify-js assets/js/script.js -o assets/js/script.min.js"
+  },
+  "keywords": [
+    "neuro-dimensional",
+    "cognitive-science",
+    "ai",
+    "neuroscience",
+    "research",
+    "framework"
+  ],
+  "author": "Muhammad Bilal Ashfaq",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nda-initiative/nda-website"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
