@@ -1,0 +1,1439 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDA Institute - Neuro-Dimensional Architecture Research</title>
+    <meta name="description" content="Research portal for the Neuro-Dimensional Architecture (NDA) framework - a theoretical framework for higher-dimensional cognition in biological and artificial systems.">
+    <meta name="keywords" content="Neuro-Dimensional Architecture, NDA, higher-dimensional cognition, AI, neuroscience, theoretical framework, Dimensional Intelligence Hypothesis">
+    <meta name="author" content="Muhammad Bilal Ashfaq">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='favGradient' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%232980b9;stop-opacity:1' /><stop offset='100%' style='stop-color:%238e44ad;stop-opacity:1' /></linearGradient></defs><path d='M 30,50 Q 40,30 50,30 Q 60,30 70,50 Q 60,70 50,70 Q 40,70 30,50 Z' fill='url(%23favGradient)' opacity='0.9' /><line x1='50' y1='35' x2='50' y2='45' stroke='white' stroke-width='3' /><line x1='45' y1='40' x2='55' y2='40' stroke='white' stroke-width='3' /></svg>">
+    
+    <!-- Favicon for browsers -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<!-- Apple Touch Icon (for iOS/macOS) -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Android/Chrome -->
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+
+<!-- Web App Manifest (important for Google) -->
+<link rel="manifest" href="/site.webmanifest">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0d1520;
+            --secondary: #1f639b;
+            --accent: #7d3c98;
+            --light: #f8f9fa;
+            --dark: #0d1520;
+            --gray: #566573;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f0f3f5 0%, #d6dbe0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header with Logo */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            filter: drop-shadow(0 2px 4px rgba(31, 99, 155, 0.4));
+            transition: var(--transition);
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.05) rotate(5deg);
+            filter: drop-shadow(0 4px 8px rgba(31, 99, 155, 0.6));
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .logo-tagline {
+            font-size: 0.7rem;
+            color: var(--gray);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Enhanced Hero Section - DARKER THEME */
+        .hero {
+            background: linear-gradient(135deg, #0a111a 0%, #0d1520 100%);
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(31, 99, 155, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(125, 60, 152, 0.12) 0%, transparent 50%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="white" opacity="0.02"/></svg>');
+            animation: pulse 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-pre-title {
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(31, 99, 155, 0.4), rgba(125, 60, 152, 0.4));
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            text-transform: uppercase;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.4);
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.98);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.8;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            font-weight: 300;
+        }
+
+        /* Neuro-Dimensional Structure Visualization - DARKER */
+        .nd-structure {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin: 3rem auto 2rem;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .nd-structure::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background: conic-gradient(from 0deg, 
+                transparent, 
+                rgba(31, 99, 155, 0.25), 
+                rgba(125, 60, 152, 0.25), 
+                transparent);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .nd-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .nd-title {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        }
+
+        .nd-title svg {
+            width: 24px;
+            height: 24px;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
+        }
+
+        .nd-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.98);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .nd-text strong {
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .nd-highlight {
+            background: linear-gradient(90deg, rgba(31, 99, 155, 0.3), rgba(125, 60, 152, 0.3));
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid #3498db;
+            margin-top: 2rem;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+        }
+
+        .nd-highlight h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        }
+
+        .nd-highlight p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .nd-highlight strong {
+            color: white;
+            font-weight: 700;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3.5rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(90deg, #2980b9, #1f639b);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(31, 99, 155, 0.5);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.7s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(31, 99, 155, 0.7);
+            background: linear-gradient(90deg, #1f639b, #2980b9);
+        }
+
+        /* UPDATED: "Discover the Framework" button - DARKER with HIGHER CONTRAST */
+        .cta-button.framework {
+            background: linear-gradient(135deg, #1a5276, #154360);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            box-shadow: 
+                0 8px 30px rgba(21, 67, 96, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+                0 0 20px rgba(52, 152, 219, 0.3);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button.framework:hover {
+            background: linear-gradient(135deg, #154360, #1b4f72);
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 
+                0 12px 40px rgba(21, 67, 96, 0.8),
+                0 0 0 2px rgba(255, 255, 255, 0.3) inset,
+                0 0 30px rgba(52, 152, 219, 0.5);
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .cta-button.framework::after {
+            content: '→';
+            margin-left: 8px;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button.framework:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* Paper Card */
+        .paper-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin: 3rem auto;
+            max-width: 900px;
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--accent);
+        }
+
+        .paper-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .paper-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            flex-wrap: wrap;
+        }
+
+        .paper-abstract {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .paper-btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .paper-btn.primary {
+            background: var(--secondary);
+            color: white;
+            border: 2px solid var(--secondary);
+        }
+
+        .paper-btn.secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .paper-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* NDA Constructs */
+        .constructs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .construct-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid #eaeaea;
+        }
+
+        .construct-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--secondary);
+        }
+
+        .construct-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .construct-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Code Section */
+        .code-status {
+            background: #fff8e1;
+            border: 2px dashed #ffb300;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .status-icon {
+            font-size: 3rem;
+            color: #ffb300;
+            margin-bottom: 1rem;
+        }
+
+        .architecture-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .architecture-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 2px solid #eaeaea;
+            text-align: center;
+        }
+
+        .architecture-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Team Section - WITH PROFILE PICTURE */
+        .team-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .profile-image-container {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+        }
+
+        .profile-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(31, 99, 155, 0.1), rgba(125, 60, 152, 0.1));
+        }
+
+        .team-name {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .team-title {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .team-bio {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-contact {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-link {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .license-badge {
+            margin-top: 1rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .nd-structure {
+                padding: 1.5rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .paper-card {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .paper-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .profile-image-container {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .team-card {
+                padding: 2rem;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            header, footer, .cta-button, .paper-btn {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            section {
+                padding: 1rem 0;
+                break-inside: avoid;
+            }
+        }
+
+        /* Notification Animations */
+        @keyframes slideIn {
+            from { 
+                transform: translateX(100%); 
+                opacity: 0; 
+            }
+            to { 
+                transform: translateX(0); 
+                opacity: 1; 
+            }
+        }
+
+        @keyframes slideOut {
+            from { 
+                transform: translateX(0); 
+                opacity: 1; 
+            }
+            to { 
+                transform: translateX(100%); 
+                opacity: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Simple brain outline with dimension lines -->
+                    <path d="M 30,50 Q 40,30 50,30 Q 60,30 70,50 Q 60,70 50,70 Q 40,70 30,50 Z" 
+                          fill="url(#logoGradient)" opacity="0.9" />
+                    
+                    <!-- Plus sign for dimensions -->
+                    <line x1="50" y1="35" x2="50" y2="45" stroke="white" stroke-width="3" />
+                    <line x1="45" y1="40" x2="55" y2="40" stroke="white" stroke-width="3" />
+                </svg>
+                <div class="logo-text">
+                    <h1>NDA<span>Initiative</span></h1>
+                    <div class="logo-tagline">Higher-Dimensional Cognition Research</div>
+                </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#paper">Paper</a></li>
+                    <li><a href="#framework">Framework</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Enhanced Hero Section - DARKER THEME -->
+    <section class="hero" aria-label="Introduction">
+        <div class="container hero-content">
+            <div class="hero-pre-title">RESEARCH IN NEW ERA OF SCIENCE</div>
+            
+            <h2>Neuro-Dimensional Architecture</h2>
+            
+            <div class="hero-subtitle">
+                Beyond Three Dimensions: A New Paradigm for Intelligence
+            </div>
+            
+            <div class="hero-description">
+                A groundbreaking theoretical framework proposing that cognitive systems fundamentally operate in higher-dimensional mathematical spaces, transcending traditional three-dimensional limitations.
+            </div>
+
+            <!-- Neuro-Dimensional Structure Visualization - DARKER -->
+            <div class="nd-structure">
+                <div class="nd-content">
+                    <div class="nd-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        The Neuro-Dimensional Structure
+                    </div>
+                    
+                    <div class="nd-text">
+                        The NDA framework reveals that intelligence isn't bound by physical three-dimensional constraints. 
+                        Cognitive processes naturally unfold in <strong>higher-dimensional manifolds</strong>, where thoughts, 
+                        memories, and decisions exist in expanded geometric configurations beyond our perceptual limits.
+                    </div>
+                    
+                    <div class="nd-highlight">
+                        <h4>🌐 Key Insight: Dimensional Intelligence Hypothesis</h4>
+                        <p>
+                            Intelligence scales <strong>superlinearly</strong> with accessible dimensional freedom. 
+                            By operating in ℝⁿ (n>3) spaces, cognitive systems achieve exponential gains in capacity, 
+                            connectivity, and problem-solving abilities through <strong>dimensional shortcuts</strong> 
+                            and <strong>hyper-connectivity</strong> unavailable in traditional 3D models.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="hero-actions">
+                <a href="#paper" class="cta-button">
+                    📄 Explore the Research Paper
+                </a>
+                <a href="#framework" class="cta-button framework">
+                    🔬 Discover the Framework
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper Section - UPDATED WITH ZENODO -->
+    <section id="paper" aria-label="Research Paper">
+        <div class="container">
+            <div class="paper-card">
+                <h3>Neuro-Dimensional Architecture (NDA): A Theoretical Framework for Higher-Dimensional Cognition</h3>
+                <div class="paper-meta">
+                    <span><strong>Author:</strong> Muhammad Bilal Ashfaq</span>
+                    <span><strong>Published:</strong> December 6, 2025</span>
+                    <span><strong>DOI:</strong> 10.5281/zenodo.17842074</span>
+                    <span><strong>Version:</strong> 1.0</span>
+                    <span><strong>License:</strong> CC BY 4.0</span>
+                </div>
+                
+                <div class="paper-abstract">
+                    <h4>Abstract</h4>
+                    <p>This paper introduces <strong>Neuro-Dimensional Architecture (NDA)</strong>, a novel scientific discipline proposing that cognitive systems can fundamentally operate in higher-dimensional mathematical spaces, transcending traditional three-dimensional limitations. We present the <strong>Dimensional Intelligence Hypothesis (DIH)</strong>, which formally posits that intelligence scales superlinearly with accessible dimensional freedom.</p>
+                    <p>The framework establishes four foundational constructs, three governing laws, and provides novel interpretations for cognitive phenomena (insight, intuition, creativity) as signatures of latent higher-dimensional processing. We propose novel AI architectures and outline experimental validation pathways in neuroscience and machine learning.</p>
+                    
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(31, 99, 155, 0.05); border-left: 4px solid #1f639b; border-radius: 4px;">
+                        <p style="margin: 0; font-size: 0.9rem; color: #1f639b;">
+                            <strong>📚 Official Publication:</strong> This paper is now published on Zenodo with permanent DOI.
+                            Cite as: Ashfaq, M. B. (2025). Neuro-Dimensional Architecture...
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="paper-links">
+                    <a href="https://doi.org/10.5281/zenodo.17842074" 
+                       class="paper-btn primary" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="View publication on Zenodo">
+                        🌐 View on Zenodo
+                    </a>
+                    
+                    <a href="https://zenodo.org/records/17842074/files/NDA_Initiative.pdf?download=1" 
+                       class="paper-btn secondary"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       onclick="return downloadPDF(event)"
+                       aria-label="Download PDF of the paper">
+                        📥 Download PDF
+                    </a>
+                    
+                    <a href="#citation" 
+                       class="paper-btn secondary" 
+                       onclick="showCitation(); return false;"
+                       aria-label="Copy APA citation to clipboard">
+                        📚 Copy Citation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section id="framework" style="background: #f8f9fa;" aria-label="NDA Framework">
+        <div class="container">
+            <div class="section-title">
+                <h2>The NDA Framework</h2>
+                <p>Four foundational constructs for higher-dimensional cognition</p>
+            </div>
+            
+            <div class="constructs-grid">
+                <div class="construct-card">
+                    <div class="construct-icon" aria-hidden="true">📐</div>
+                    <h3>Dimensional Neural Geometry (DNG)</h3>
+                    <p>Studies neural embeddings in ℝⁿ (n>3), enabling hyper-connectivity and distance compression in cognitive spaces.</p>
+                </div>
+                
+                <div class="construct-card">
+                    <div class="construct-icon" aria-hidden="true">🧠</div>
+                    <h3>Multi-Axis Thought Pathways (MATP)</h3>
+                    <p>Models cognitive processes propagating simultaneously across multiple independent dimensions, enabling parallel intuition.</p>
+                </div>
+                
+                <div class="construct-card">
+                    <div class="construct-icon" aria-hidden="true">💾</div>
+                    <h3>Non-Euclidean Memory Architecture (NEMA)</h3>
+                    <p>Utilizes curved manifolds for exponential memory capacity and natural hierarchy embedding.</p>
+                </div>
+                
+                <div class="construct-card">
+                    <div class="construct-icon" aria-hidden="true">⚡</div>
+                    <h3>Dimensional State Collapse (DSC)</h3>
+                    <p>Explains decision-making and insight as projection from high-dimensional states to lower-dimensional outputs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Section -->
+    <section id="code" aria-label="Code and Implementations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Code & Implementations</h2>
+                <p>Open-source implementations of NDA architectures</p>
+            </div>
+            
+            <div class="code-status">
+                <div class="status-icon" aria-hidden="true">🚀</div>
+                <h3>Active Development</h3>
+                <p>Reference implementations are currently in development and will be released under the <strong>MIT License</strong>.</p>
+                
+                <div class="architecture-list">
+                    <div class="architecture-item">
+                        <h4>HD-Transformer</h4>
+                        <p>Hyper-Dimensional Transformer extending attention to n-dimensional token manifolds</p>
+                    </div>
+                    <div class="architecture-item">
+                        <h4>NEM-Net</h4>
+                        <p>Non-Euclidean Memory Network using hyperbolic geometry for exponential capacity</p>
+                    </div>
+                    <div class="architecture-item">
+                        <h4>Dimensional Collapse Network</h4>
+                        <p>Learns task-optimal projections from high to low-dimensional spaces</p>
+                    </div>
+                </div>
+                
+                <a href="https://github.com/nda-initiative" class="cta-button" target="_blank" rel="noopener noreferrer" style="background: #24292e; border-color: #24292e;">
+                    🐙 Visit GitHub Organization
+                </a>
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    <em>Note: GitHub repository will be populated following paper publication.</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section with Profile Image -->
+    <section id="team" class="team-section" aria-label="Research Team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Research Team</h2>
+                <p>Leading the development of the NDA framework</p>
+            </div>
+            
+            <div class="team-card">
+                <div class="profile-image-container">
+                    <img src="https://i.postimg.cc/Z5bP30x2/Image.jpg" 
+                         alt="Muhammad Bilal Ashfaq - Founder & Principal Researcher" 
+                         class="profile-image"
+                         onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><rect width=\"100\" height=\"100\" fill=\"%231f639b\"/><text x=\"50\" y=\"55\" font-family=\"Arial\" font-size=\"40\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\"></svg>
+                    <div class="profile-image-overlay"></div>
+                </div>
+                
+                <h3 class="team-name">Muhammad Bilal Ashfaq</h3>
+                <p class="team-title">Founder & Principal Researcher</p>
+                
+                <div class="team-bio">
+                    <p>Author of the Neuro-Dimensional Architecture (NDA) framework and founder of the Neuro-Dimensional Architecture Initiative. With a background in cognitive science and artificial intelligence, Bilal leads research into higher-dimensional cognition and its applications in both biological and artificial systems.</p>
+                </div>
+                
+                <div class="team-contact">
+                    <a href="mailto:bilal@nda-institute.org" class="contact-link">
+                        ✉️ bilal@nda-institute.org
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-label="Contact Information">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact & Collaboration</h2>
+                <p>Get in touch with the NDA Initiative</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:contact@nda-institute.org">contact@nda-institute.org</a></p>
+                            <p><a href="mailto:bilal@nda-institute.org">bilal@nda-institute.org</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">🐙</div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/nda-initiative" target="_blank" rel="noopener noreferrer">github.com/nda-initiative</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">🏢</div>
+                        <div>
+                            <h4>Institution</h4>
+                            <p>Neuro-Dimensional Architecture Initiative</p>
+                            <p>A research organization advancing higher-dimensional cognition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NDA Initiative</h3>
+                    <p>Advancing the theory and application of higher-dimensional cognition in biological and artificial systems.</p>
+                    <div class="license-badge">
+                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons Attribution 4.0 International License">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#paper">Research Paper</a></li>
+                        <li><a href="#framework">NDA Framework</a></li>
+                        <li><a href="#code">Code Repository</a></li>
+                        <li><a href="#team">Research Team</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#license">License Information</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Use</a></li>
+                        <li><a href="citation.txt" download>Citation Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© <span id="current-year">2025</span> Neuro-Dimensional Architecture Initiative. All rights reserved.</p>
+                <p>Research papers licensed under CC BY 4.0. Code released under MIT License.</p>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem;">Website: <a href="https://www.nda-institute.org" style="color: rgba(255,255,255,0.8);">www.nda-institute.org</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without page jump
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+
+        // Update current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
+            
+            // Update all copyright year elements
+            document.querySelectorAll('.copyright p').forEach(element => {
+                element.innerHTML = element.innerHTML.replace('2025', currentYear);
+            });
+        });
+
+        // Add active class to current navigation item
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Enhanced PDF download function
+        function downloadPDF(event) {
+            // For browsers that support download attribute, let it work normally
+            if (event.target.download) {
+                return true;
+            }
+            
+            // Fallback for browsers that don't support download attribute
+            event.preventDefault();
+            
+            // Create a temporary iframe for download
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = 'https://zenodo.org/records/17842074/files/NDA_Initiative.pdf?download=1';
+            document.body.appendChild(iframe);
+            
+            // Remove iframe after download starts
+            setTimeout(() => {
+                document.body.removeChild(iframe);
+            }, 5000);
+            
+            // Show success message
+            showDownloadNotification();
+            
+            return false;
+        }
+
+        // Show download notification
+        function showDownloadNotification() {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #1f639b;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                z-index: 10000;
+                font-weight: 600;
+                animation: slideIn 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.innerHTML = `
+                <span>✅</span>
+                <div>
+                    <strong>PDF Download Started</strong><br>
+                    <small style="opacity: 0.9;">If download doesn't start, check your browser downloads</small>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 4 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+
+        // Enhanced citation function
+        function showCitation() {
+            const citationText = `Ashfaq, M. B. (2025). Neuro-Dimensional Architecture (NDA): A Theoretical Framework for Higher-Dimensional Cognition in Biological and Artificial Systems (Version 1.0). Zenodo. https://doi.org/10.5281/zenodo.17842074`;
+            
+            navigator.clipboard.writeText(citationText).then(() => {
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 80px;  /* Lower than download notification */
+                    right: 20px;
+                    background: #27ae60;
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                    z-index: 10000;
+                    font-weight: 600;
+                    animation: slideIn 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                `;
+                
+                notification.innerHTML = `
+                    <span>✅</span>
+                    <div>
+                        <strong>Citation Copied!</strong><br>
+                        <small style="opacity: 0.9;">APA format copied to clipboard</small>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => notification.remove(), 300);
+                }, 4000);
+            }).catch(err => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = citationText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                alert('Citation copied to clipboard!');
+            });
+            
+            return false;
+        }
+
+        // Add CSS for active navigation item
+        const style = document.createElement('style');
+        style.textContent = `
+            nav a.active {
+                color: var(--secondary) !important;
+                font-weight: 600;
+            }
+            nav a.active::after {
+                width: 100% !important;
+            }
+            
+            /* Animation for logo */
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-5px); }
+            }
+            
+            .logo-icon {
+                animation: float 4s ease-in-out infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
