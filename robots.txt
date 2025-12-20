@@ -1,1 +1,4 @@
 https://www.nda-institute.org/sitemap.xml
+User-agent: Googlebot-Image
+Allow: /favicon.ico
+Allow: /path-to-your-logo/
