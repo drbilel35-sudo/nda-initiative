@@ -1,4 +1,9 @@
-https://www.nda-institute.org/sitemap.xml
+Sitemap: https://www.nda-institute.org/sitemap.xml
+
 User-agent: Googlebot-Image
-Allow: /favicon.ico
-Allow: /path-to-your-logo/
+Allow: /logo.png
+Allow: /android-chrome-512x512.png
+Allow: /favicon-48x48.png
+
+User-agent: *
+Allow: /
